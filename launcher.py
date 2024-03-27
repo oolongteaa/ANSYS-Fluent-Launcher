@@ -1,5 +1,10 @@
 import argparse
 import ansys.fluent.core as pyfluent
+import sys
+# Add logging to fluent
+pyfluent.logging.enable()
+
+sys.path.insert(0, 'C:/Users/Administrator/PycharmProjects/testANSYS')
 
 parser = argparse.ArgumentParser(
                      prog='FluentLauncer',
@@ -29,6 +34,10 @@ solver.solution.initialization.hybrid_initialize()
 solver.solution.run_calculation.iterate()
 
 #./testFluent.py --filepath 'C:/Users/Administrator/Desktop/Fluent/Fluent/FFF-Setup-Output.cas.h5' --iterations 150 --cores 8 --show_gui True
+
+
+
+
 
 
 
